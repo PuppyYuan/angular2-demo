@@ -1,0 +1,9 @@
+<div class="cmp-1">
+  <p>Hello, {{ greeting }}!</p>
+  <label><input type="checkbox" [(ngModel)]="isShowMore" > 是否显示详细信息</label>
+  <p *ngIf="isShowMore" highlight>Angular 2 is a google project</p>
+
+  <child [message]="msg2Child" (outer)="receive($event)"></child>
+
+  <p>来自子组件的消息: {{msgFromChild}}</p>
+</div>
